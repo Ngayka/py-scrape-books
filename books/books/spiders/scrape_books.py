@@ -35,5 +35,5 @@ class BooksSpider(scrapy.Spider):
             "rating": rating,
             "category": response.css(".breadcrumb li a::text").getall()[2],
             "description": response.css("#product_description + p::text").get(),
-            "UPC": response.css("table tr td::text").get()
+            "upc": response.css("table tr td::text").get()
         }
